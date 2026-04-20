@@ -1,5 +1,6 @@
 
 import random
+import matplotlib.pyplot as plt
 
 def random_numbers(count, low=0, high=100):
     return [random.randint(low, high) for _ in range(count)]
@@ -29,13 +30,29 @@ def selection_sort(values):
 
 
 def bubble_sort(numbers_list):
+    plt.ion()
+    plt.show()
 
     for i in range(len(numbers_list)):
         for y in range(0, (len(numbers_list)) - i - 1):
             if numbers_list[y] > numbers_list[y+1]:
                 numbers_list[y], numbers_list[y+1] = numbers_list[y+1], numbers_list[y]
 
+            index_highlight1 = y
+            index_highlight2 = y + 1
+            colors = ["steelblue"] * len(numbers_list)
+            colors[index_highlight1] = "tomato"
+            colors[index_highlight2] = "tomato"
+            plt.clf()
+            plt.bar(range(len(numbers_list)), numbers_list, color=colors)
+            plt.title("Bubble Sort")
+            plt.pause(0.1)
+
+    plt.ioff()
+    plt.show()
+
     return numbers_list
+
 
 
 
