@@ -6,10 +6,9 @@ def random_numbers(count, low=0, high=100):
 
 
 values = random_numbers(10)  # 10 čísel v rozsahu 0–100
-print(values)  # např. [42, 7, 91, 15, 63, 8, 57, 73, 2, 100]
+  # např. [42, 7, 91, 15, 63, 8, 57, 73, 2, 100]
 
 small = random_numbers(5, low=0, high=20)  # 5 čísel v rozsahu 0–20
-print(small)
 
 
 def selection_sort(values):
@@ -26,12 +25,25 @@ def selection_sort(values):
         values[min_ind], values[min_index] = values[min_index], values[min_ind]
         print(values)
 
-        return values
+    return values
+
+
+def bubble_sort(numbers_list):
+
+    for i in range(len(numbers_list)):
+        for y in range(0, (len(numbers_list)) - i - 1):
+            if numbers_list[y] > numbers_list[y+1]:
+                numbers_list[y], numbers_list[y+1] = numbers_list[y+1], numbers_list[y]
+
+    return numbers_list
+
 
 
 if __name__ == "__main__":
     result = selection_sort(small)
     print(result)
+    bubble = bubble_sort(small)
+    print(bubble)
 
 
 
