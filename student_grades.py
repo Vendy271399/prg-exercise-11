@@ -1,4 +1,4 @@
-
+from sorting import random_numbers
 
 class StudentsGrades:
     def __init__(self, scores):
@@ -48,9 +48,22 @@ class StudentsGrades:
 
 def main():
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    print(results.get_grade(7))
-    print(results.find(42))
+    print(results.count())
+
+    for i, score in enumerate(results.scores):
+        print(f"Student {i}: {results.scores[i]} points – {results.get_grade(i)}")
+
+    for i, score in enumerate(results.scores):
+        if results.scores[i] == 100:
+            print(i)
+
     print(results.get_sorted())
+
+
+    random_results = StudentsGrades(random_numbers(30, 0, 100))
+
+    print(random_results.count())
+    print(random_results.get_sorted())
 
 
 

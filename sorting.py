@@ -1,5 +1,3 @@
-
-import random
 import matplotlib.pyplot as plt
 
 def random_numbers(count, low=0, high=100):
