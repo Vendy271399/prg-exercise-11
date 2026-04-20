@@ -49,10 +49,15 @@ class StudentsGrades:
 
 def main():
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    print(results.get_sorted())
-    print(results.find(42))
+    number_of_student = results.count()
+
+    for i in range(len(number_of_student)):
+
+
 
 if __name__ == "__main__":
     print(main())
+
+
 
 
