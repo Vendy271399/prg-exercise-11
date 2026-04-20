@@ -47,13 +47,12 @@ class StudentsGrades:
         return scores
 
 
+def main():
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+    print(results.get_sorted())
+    print(results.find(42))
+
+if __name__ == "__main__":
+    print(main())
 
 
-
-
-
-
-results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-print(results)
-print(results.get_by_index(4))
-print(results.count())
