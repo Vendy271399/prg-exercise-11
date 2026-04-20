@@ -29,10 +29,9 @@ class StudentsGrades:
     def find(self, find_score):
         list_of_index = []
 
-        for i in range(len(self.scores)):
-            for score in self.scores:
-                if score == find_score:
-                    list_of_index.append(i)
+        for i, score in enumerate(self.scores):
+            if score == find_score:
+                list_of_index.append(i)
 
         return list_of_index
 
@@ -49,9 +48,9 @@ class StudentsGrades:
 
 def main():
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    number_of_student = results.count()
-
-    for i in range(len(number_of_student)):
+    print(results.get_grade(7))
+    print(results.find(42))
+    print(results.get_sorted())
 
 
 
