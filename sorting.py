@@ -55,7 +55,6 @@ def bubble_sort(numbers_list):
 
 
 
-
 if __name__ == "__main__":
     result = selection_sort(small)
     print(result)
